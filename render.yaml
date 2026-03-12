@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: carmencita-export
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars: []

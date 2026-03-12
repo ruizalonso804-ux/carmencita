@@ -1,0 +1,13 @@
+{
+  "name": "carmencita-export",
+  "version": "1.0.0",
+  "description": "Carmencita Export — Chilean honey exporter website",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

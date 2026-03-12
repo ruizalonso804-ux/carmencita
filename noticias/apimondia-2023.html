@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carmencita Export en APIMONDIA 2023 — Noticias</title>
+    <meta name="description" content="Carmencita Export estuvo presente en el lanzamiento oficial de APIMONDIA 2023, el congreso mundial de apicultura." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍯</text></svg>" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/navbar.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/articulo.css" />
+</head>
+<body>
+    <div id="section-navbar"></div>
+
+    <main class="articulo">
+        <div class="articulo__hero">
+            <img src="/images/noticias/portada-apimondia-2023.jpg" alt="APIMONDIA 2023" class="articulo__hero-img" />
+            <div class="articulo__hero-overlay"></div>
+            <div class="articulo__hero-content container">
+                <span class="articulo__category">Industria</span>
+                <h1 class="articulo__title">Carmencita Export, presente en el lanzamiento oficial de APIMONDIA 2023</h1>
+                <div class="articulo__meta">
+                    <span class="articulo__date">28 de Noviembre, 2022</span>
+                    <span class="articulo__dot">·</span>
+                    <span class="articulo__read">3 min de lectura</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="articulo__body container">
+            <div class="articulo__content">
+
+                <p class="articulo__lead">
+                    Con la presencia del Ministro de Agricultura Esteban Valenzuela, Carmencita Export participó
+                    activamente en el lanzamiento oficial del Congreso Mundial de Apicultura APIMONDIA 2023,
+                    reafirmando su posición de liderazgo en la industria apícola chilena e internacional.
+                </p>
+
+                <p>
+                    El evento marcó el inicio de una nueva etapa para la apicultura chilena, proyectando a Chile
+                    como anfitrión del congreso apícola más importante del mundo. La presencia de Carmencita Export
+                    en este hito demuestra el compromiso de la empresa con el desarrollo y la internacionalización
+                    del sector.
+                </p>
+
+                <!-- FOTO 1 — reemplaza la ruta cuando tengas la imagen -->
+                <div class="articulo__foto-slot">
+                    <img src="/images/noticias/apimondia-2023-foto1.jpg"
+                         alt="Lanzamiento APIMONDIA 2023"
+                         class="articulo__foto"
+                         onerror="this.parentElement.classList.add('articulo__foto-slot--vacio')" />
+                    <p class="articulo__foto-caption">Lanzamiento oficial de APIMONDIA 2023</p>
+                </div>
+
+                <h2>Un hito para la apicultura chilena</h2>
+
+                <p>
+                    APIMONDIA es la federación internacional de asociaciones de apicultores que congrega a
+                    organizaciones de más de 100 países. Su congreso bienal es el evento más importante del
+                    sector a nivel mundial, reuniendo a investigadores, productores, exportadores y actores de
+                    la cadena de valor apícola global.
+                </p>
+
+                <p>
+                    La elección de Chile como sede del congreso 2023 representa un reconocimiento al nivel de
+                    desarrollo alcanzado por la apicultura nacional y a la calidad de la miel chilena en los
+                    mercados internacionales. Carmencita Export ha sido uno de los actores clave en posicionar
+                    a Chile como referente mundial de calidad.
+                </p>
+
+                <h2>Compromiso con el desarrollo del sector</h2>
+
+                <p>
+                    "Nuestra participación en este lanzamiento refleja nuestro compromiso no solo con la
+                    exportación de miel de calidad, sino con el desarrollo integral del sector apícola
+                    chileno", señalaron desde la empresa.
+                </p>
+
+                <!-- FOTO 2 — reemplaza la ruta cuando tengas la imagen -->
+                <div class="articulo__foto-slot">
+                    <img src="/images/noticias/apimondia-2023-foto2.jpg"
+                         alt="Carmencita Export en APIMONDIA"
+                         class="articulo__foto"
+                         onerror="this.parentElement.classList.add('articulo__foto-slot--vacio')" />
+                    <p class="articulo__foto-caption">Equipo Carmencita Export en el evento</p>
+                </div>
+
+                <div class="articulo__highlight">
+                    <p>
+                        Chile exporta anualmente miles de toneladas de miel a más de 25 países, con
+                        Carmencita Export como principal protagonista de esa cadena exportadora.
+                    </p>
+                </div>
+
+                <p>
+                    El congreso APIMONDIA 2023 fue una oportunidad única para mostrar al mundo el potencial
+                    de la apicultura chilena y los altos estándares de calidad y trazabilidad que empresas
+                    como Carmencita Export han logrado consolidar durante más de 25 años de trayectoria.
+                </p>
+
+            </div>
+
+            <aside class="articulo__sidebar">
+                <div class="articulo__sidebar-card">
+                    <h3>Sobre Carmencita Export</h3>
+                    <p>Más de 25 años exportando miel chilena premium al mundo. Trabajamos con 2.000+ apicultores en todo Chile.</p>
+                    <a href="/#contact" class="btn btn--primary">Contáctanos</a>
+                </div>
+                <div class="articulo__sidebar-card">
+                    <h3>Otras Noticias</h3>
+                    <ul class="articulo__related">
+                        <li><a href="/noticias/capacitacion-terreno.html">Capacitación en terreno por profesionales apícolas</a></li>
+                        <li><a href="/noticias/apimondia-2022.html">Carmencita Export en APIMONDIA 2022</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div id="section-footer"></div>
+    <script type="module">
+        async function loadSection(id, file) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const r = await fetch(file);
+            el.innerHTML = await r.text();
+        }
+        async function init() {
+            await Promise.all([
+                loadSection('section-navbar', '/sections/navbar-articulo.html'),
+                loadSection('section-footer', '/sections/footer.html'),
+            ]);
+            const navbar = document.getElementById('navbar');
+            if (navbar) window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+        }
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

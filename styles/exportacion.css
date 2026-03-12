@@ -1,0 +1,190 @@
+/* =============================================
+   EXPORTACIÓN SECTION
+   ============================================= */
+
+.exportacion {
+    padding: var(--space-20) 0;
+    background: var(--color-white);
+}
+
+.exportacion__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+}
+
+.exportacion__image-wrap {
+    position: relative;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-2xl);
+}
+
+.exportacion__image-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(212, 160, 23, 0.1),
+            transparent);
+    z-index: 1;
+}
+
+.exportacion__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    transition: transform var(--transition-slow);
+}
+
+.exportacion__image-wrap:hover .exportacion__image {
+    transform: scale(1.03);
+}
+
+.exportacion__floating-badge {
+    position: absolute;
+    bottom: var(--space-6);
+    right: var(--space-6);
+    z-index: 2;
+    background: rgba(17, 17, 17, 0.9);
+    backdrop-filter: blur(10px);
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-xl);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.exportacion__floating-number {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    font-weight: 800;
+    color: var(--color-amber-300);
+}
+
+.exportacion__floating-text {
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+.exportacion__content {
+    padding: var(--space-4) 0;
+}
+
+.exportacion__label {
+    color: var(--color-amber-500);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-3);
+}
+
+.exportacion__title {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-6);
+    line-height: 1.15;
+}
+
+.exportacion__text {
+    color: var(--color-gray-600);
+    line-height: 1.8;
+    margin-bottom: var(--space-6);
+}
+
+.exportacion__features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+}
+
+.exportacion__feature {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+}
+
+.exportacion__feature-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    background: var(--color-amber-100);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-amber-600);
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.exportacion__feature-text {
+    font-size: var(--text-sm);
+    color: var(--color-gray-700);
+    margin-bottom: 0;
+}
+
+/* --- Gran capacidad de gestión stats --- */
+.exportacion__gestion {
+    margin: var(--space-8) 0;
+    padding: var(--space-6);
+    background: var(--color-gray-50, #f9f9f9);
+    border-radius: var(--radius-xl);
+    border-top: 3px solid var(--color-amber-400, #d4a017);
+}
+
+.exportacion__gestion-label {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-amber-600, #c8960c);
+    margin-bottom: var(--space-5);
+}
+
+.exportacion__gestion-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+    text-align: center;
+}
+
+.exportacion__gestion-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.exportacion__gestion-number {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--color-dark, #1a1a1a);
+    line-height: 1;
+}
+
+.exportacion__gestion-unit {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .exportacion__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .exportacion__gestion-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

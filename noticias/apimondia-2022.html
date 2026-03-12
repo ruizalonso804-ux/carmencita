@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carmencita Export en APIMONDIA 2022 — Noticias</title>
+    <meta name="description" content="Carmencita Export participó en el Congreso Mundial de Apicultura APIMONDIA 2022." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍯</text></svg>" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/navbar.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/articulo.css" />
+</head>
+<body>
+    <div id="section-navbar"></div>
+
+    <main class="articulo">
+        <div class="articulo__hero">
+            <img src="/images/noticias/portada-apimondia-2022.jpg" alt="APIMONDIA 2022" class="articulo__hero-img" />
+            <div class="articulo__hero-overlay"></div>
+            <div class="articulo__hero-content container">
+                <span class="articulo__category">Industria</span>
+                <h1 class="articulo__title">Carmencita Export presente en APIMONDIA 2022</h1>
+                <div class="articulo__meta">
+                    <span class="articulo__date">28 de Noviembre, 2022</span>
+                    <span class="articulo__dot">·</span>
+                    <span class="articulo__read">3 min de lectura</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="articulo__body container">
+            <div class="articulo__content">
+
+                <p class="articulo__lead">
+                    Carmencita Export consolidó su presencia internacional al participar en el Congreso
+                    Mundial de Apicultura APIMONDIA 2022, donde exhibió los avances de la apicultura chilena
+                    y su compromiso con la sustentabilidad y la calidad de exportación.
+                </p>
+
+                <p>
+                    APIMONDIA reúne cada dos años a los principales actores del sector apícola mundial.
+                    La presencia de Carmencita Export en este escenario global permite fortalecer alianzas
+                    comerciales, acceder a nuevos mercados y mantenerse a la vanguardia de las tendencias
+                    y tecnologías de la industria.
+                </p>
+
+                <!-- FOTO 1 — reemplaza la ruta cuando tengas la imagen -->
+                <div class="articulo__foto-slot">
+                    <img src="/images/noticias/apimondia-2022-foto1.jpg"
+                         alt="Carmencita Export en APIMONDIA 2022"
+                         class="articulo__foto"
+                         onerror="this.parentElement.classList.add('articulo__foto-slot--vacio')" />
+                    <p class="articulo__foto-caption">Stand de Carmencita Export en APIMONDIA 2022</p>
+                </div>
+
+                <h2>Chile como referente mundial de miel</h2>
+
+                <p>
+                    La participación de Carmencita Export en APIMONDIA 2022 fue una oportunidad clave
+                    para posicionar la miel chilena como un producto premium de clase mundial. La pureza
+                    del ecosistema chileno, la diversidad floral y los rigurosos estándares de producción
+                    hacen de la miel nacional un producto altamente valorado en los mercados más exigentes.
+                </p>
+
+                <p>
+                    En el evento se presentaron las características únicas de variedades emblemáticas como
+                    la miel de Ulmo —proveniente de los bosques nativos del sur de Chile— y la miel de
+                    Quillay, reconocida por sus propiedades antioxidantes y medicinales.
+                </p>
+
+                <!-- FOTO 2 — reemplaza la ruta cuando tengas la imagen -->
+                <div class="articulo__foto-slot">
+                    <img src="/images/noticias/apimondia-2022-foto2.jpg"
+                         alt="Miel chilena en APIMONDIA"
+                         class="articulo__foto"
+                         onerror="this.parentElement.classList.add('articulo__foto-slot--vacio')" />
+                    <p class="articulo__foto-caption">Presentación de variedades de miel chilena</p>
+                </div>
+
+                <div class="articulo__highlight">
+                    <p>
+                        Con más de 25 años de experiencia, 70.000 toneladas exportadas y presencia en
+                        más de 25 países, Carmencita Export reafirma en cada congreso su liderazgo en
+                        la exportación de miel chilena premium.
+                    </p>
+                </div>
+
+                <p>
+                    Las certificaciones internacionales de Carmencita Export —Fairtrade, NSF, True Source,
+                    HACCP, SAG Orgánico, entre otras— fueron uno de los puntos destacados en el congreso,
+                    demostrando el nivel de exigencia y compromiso de la empresa con los estándares globales.
+                </p>
+
+            </div>
+
+            <aside class="articulo__sidebar">
+                <div class="articulo__sidebar-card">
+                    <h3>Nuestras Certificaciones</h3>
+                    <p>Contamos con las certificaciones más exigentes del mercado internacional.</p>
+                    <a href="/#certifications" class="btn btn--primary">Ver Certificaciones</a>
+                </div>
+                <div class="articulo__sidebar-card">
+                    <h3>Otras Noticias</h3>
+                    <ul class="articulo__related">
+                        <li><a href="/noticias/apimondia-2023.html">Carmencita Export en APIMONDIA 2023</a></li>
+                        <li><a href="/noticias/capacitacion-terreno.html">Capacitación en terreno por profesionales apícolas</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div id="section-footer"></div>
+    <script type="module">
+        async function loadSection(id, file) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const r = await fetch(file);
+            el.innerHTML = await r.text();
+        }
+        async function init() {
+            await Promise.all([
+                loadSection('section-navbar', '/sections/navbar-articulo.html'),
+                loadSection('section-footer', '/sections/footer.html'),
+            ]);
+            const navbar = document.getElementById('navbar');
+            if (navbar) window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+        }
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

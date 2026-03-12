@@ -1,0 +1,93 @@
+/* =============================================
+   ALIANZAS / PARTNERS SECTION
+   ============================================= */
+
+.alianzas {
+    padding: var(--space-20) 0;
+    background: var(--color-white);
+}
+
+.alianzas__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+}
+
+.alianzas__content {
+    padding: var(--space-4) 0;
+}
+
+.alianzas__label {
+    color: var(--color-amber-500);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-3);
+}
+
+.alianzas__title {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-6);
+}
+
+.alianzas__text {
+    color: var(--color-gray-600);
+    line-height: 1.8;
+    margin-bottom: var(--space-8);
+}
+
+.alianzas__logos {
+    display: flex;
+    gap: var(--space-8);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.alianzas__partner-logo {
+    height: 60px;
+    object-fit: contain;
+    filter: grayscale(20%);
+    opacity: 0.8;
+    transition: all var(--transition-base);
+}
+
+.alianzas__partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.alianzas__image-wrap {
+    position: relative;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-2xl);
+}
+
+.alianzas__image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.alianzas__image-wrap:hover .alianzas__image {
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .alianzas__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .alianzas__inner>*:first-child {
+        order: 2;
+    }
+
+    .alianzas__inner>*:last-child {
+        order: 1;
+    }
+}

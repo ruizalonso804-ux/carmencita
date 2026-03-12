@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capacitación en Terreno — Noticias Carmencita Export</title>
+    <meta name="description" content="Nuestros profesionales apícolas realizaron capacitaciones directas en terreno para fortalecer las buenas prácticas de los apicultores asociados." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍯</text></svg>" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/navbar.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/articulo.css" />
+</head>
+<body>
+    <div id="section-navbar"></div>
+
+    <main class="articulo">
+        <div class="articulo__hero">
+            <img src="/images/noticias/portada-capacitacion.jpg" alt="Capacitación en terreno" class="articulo__hero-img" />
+            <div class="articulo__hero-overlay"></div>
+            <div class="articulo__hero-content container">
+                <span class="articulo__category">Capacitación</span>
+                <h1 class="articulo__title">Capacitación en terreno impartida por nuestros profesionales apícolas</h1>
+                <div class="articulo__meta">
+                    <span class="articulo__date">28 de Noviembre, 2022</span>
+                    <span class="articulo__dot">·</span>
+                    <span class="articulo__read">4 min de lectura</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="articulo__body container">
+            <div class="articulo__content">
+
+                <p class="articulo__lead">
+                    El equipo de profesionales apícolas de Carmencita Export llevó a cabo una nueva ronda de
+                    capacitaciones directas en terreno, reforzando las buenas prácticas de producción y los
+                    estándares de calidad exigidos por los mercados internacionales.
+                </p>
+
+                <p>
+                    La capacitación continua es un pilar fundamental en el modelo de trabajo de Carmencita Export.
+                    A través de visitas periódicas a los productores asociados, la empresa asegura que cada etapa
+                    del proceso —desde el manejo de las colmenas hasta la extracción y el envasado— cumpla con
+                    los más altos estándares de calidad e inocuidad alimentaria.
+                </p>
+
+                <!-- FOTO 1 — reemplaza la ruta cuando tengas la imagen -->
+                <div class="articulo__foto-slot">
+                    <img src="/images/noticias/capacitacion-foto1.jpg"
+                         alt="Capacitación en terreno"
+                         class="articulo__foto"
+                         onerror="this.parentElement.classList.add('articulo__foto-slot--vacio')" />
+                    <p class="articulo__foto-caption">Profesionales apícolas de Carmencita Export en terreno</p>
+                </div>
+
+                <h2>Formación directa en el campo</h2>
+
+                <p>
+                    Las capacitaciones cubrieron temas fundamentales como el manejo sanitario de colmenas,
+                    las normas de higiene en salas de extracción, el correcto uso de registros de trazabilidad
+                    y los requisitos de las certificaciones internacionales con que cuenta Carmencita Export.
+                </p>
+
+                <p>
+                    Los apicultores participantes destacaron el valor del apoyo técnico directo, que les permite
+                    mejorar sus prácticas productivas y acceder a mejores precios por su miel al cumplir con los
+                    estándares de exportación.
+                </p>
+
+                <h2>Red nacional de apicultores</h2>
+
+                <p>
+                    Carmencita Export trabaja con una amplia red de microempresarios apícolas distribuidos desde
+                    la Región de Coquimbo hasta Los Lagos. Cada productor recibe apoyo técnico personalizado
+                    a través de las sucursales regionales de la empresa en Curicó, Chillán y Santa Bárbara.
+                </p>
+
+                <!-- FOTO 2 — reemplaza la ruta cuando tengas la imagen -->
+                <div class="articulo__foto-slot">
+                    <img src="/images/noticias/capacitacion-foto2.jpg"
+                         alt="Apicultores en capacitación"
+                         class="articulo__foto"
+                         onerror="this.parentElement.classList.add('articulo__foto-slot--vacio')" />
+                    <p class="articulo__foto-caption">Apicultores participando en el programa de capacitación</p>
+                </div>
+
+                <div class="articulo__highlight">
+                    <p>
+                        "La calidad de nuestra miel comienza en el campo. Por eso invertimos en la
+                        formación permanente de nuestros apicultores, porque son el corazón de
+                        nuestra cadena de valor." — Equipo Técnico Carmencita Export
+                    </p>
+                </div>
+
+                <p>
+                    A través del Programa de Alianzas Productivas de INDAP, Carmencita Export canaliza
+                    asistencia técnica y financiamiento para apicultores de la agricultura familiar campesina,
+                    potenciando la competitividad de los pequeños productores y su integración a la cadena
+                    exportadora de miel premium.
+                </p>
+
+            </div>
+
+            <aside class="articulo__sidebar">
+                <div class="articulo__sidebar-card">
+                    <h3>¿Eres apicultor?</h3>
+                    <p>Únete a nuestra red y accede a capacitación, asistencia técnica y precios justos por tu miel.</p>
+                    <a href="/#contact" class="btn btn--primary">Contáctanos</a>
+                </div>
+                <div class="articulo__sidebar-card">
+                    <h3>Otras Noticias</h3>
+                    <ul class="articulo__related">
+                        <li><a href="/noticias/apimondia-2023.html">Carmencita Export en APIMONDIA 2023</a></li>
+                        <li><a href="/noticias/apimondia-2022.html">Carmencita Export en APIMONDIA 2022</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <div id="section-footer"></div>
+    <script type="module">
+        async function loadSection(id, file) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const r = await fetch(file);
+            el.innerHTML = await r.text();
+        }
+        async function init() {
+            await Promise.all([
+                loadSection('section-navbar', '/sections/navbar-articulo.html'),
+                loadSection('section-footer', '/sections/footer.html'),
+            ]);
+            const navbar = document.getElementById('navbar');
+            if (navbar) window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+        }
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

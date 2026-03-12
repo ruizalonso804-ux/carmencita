@@ -1,0 +1,210 @@
+/* =============================================
+   CONTACT SECTION
+   ============================================= */
+
+.contact {
+    padding: var(--space-20) 0;
+    background: var(--color-gray-50);
+}
+
+.contact__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+}
+
+.contact__info {
+    padding: var(--space-4) 0;
+}
+
+.contact__label {
+    color: var(--color-amber-500);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-3);
+}
+
+.contact__title {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-6);
+}
+
+.contact__text {
+    color: var(--color-gray-600);
+    line-height: 1.8;
+    margin-bottom: var(--space-8);
+}
+
+.contact__image-wrap {
+    margin-bottom: var(--space-8);
+    text-align: center;
+}
+
+.contact__image {
+    max-height: 280px;
+    width: auto;
+    object-fit: contain;
+}
+
+.contact__details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.contact__detail {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+}
+
+.contact__detail-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    background: linear-gradient(135deg, var(--color-amber-100), var(--color-amber-50));
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.contact__detail-label {
+    font-size: var(--text-xs);
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-1);
+}
+
+.contact__detail-value {
+    font-weight: 600;
+    color: var(--color-gray-800);
+    margin-bottom: 0;
+}
+
+/* Form */
+.contact__form-wrap {
+    background: var(--color-white);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-10);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--color-gray-200);
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.contact__form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+}
+
+.contact__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.contact__field label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--color-gray-700);
+}
+
+.contact__field input,
+.contact__field textarea,
+.contact__field select {
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--color-gray-300);
+    border-radius: var(--radius-md);
+    background: var(--color-gray-50);
+    color: var(--color-gray-800);
+    transition: all var(--transition-fast);
+    outline: none;
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus,
+.contact__field select:focus {
+    border-color: var(--color-amber-400);
+    background: var(--color-white);
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.15);
+}
+
+.contact__field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact__submit {
+    margin-top: var(--space-2);
+}
+
+.contact__form-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-amber-600, #c8960c);
+    margin-bottom: var(--space-5);
+    padding-bottom: var(--space-3);
+    border-bottom: 2px solid var(--color-amber-100, #fef3c7);
+}
+
+/* Sucursales */
+.contact__sucursales {
+    margin-top: var(--space-2);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-gray-200, #e5e7eb);
+}
+
+.contact__sucursales-title {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-gray-500);
+    margin-bottom: var(--space-4);
+}
+
+.contact__sucursales-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+}
+
+.contact__sucursal {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 0.78rem;
+    color: var(--color-gray-600);
+}
+
+.contact__sucursal strong {
+    font-weight: 700;
+    color: var(--color-gray-800);
+    margin-bottom: 2px;
+}
+
+@media (max-width: 768px) {
+    .contact__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .contact__form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact__sucursales-grid {
+        grid-template-columns: 1fr;
+    }
+}
